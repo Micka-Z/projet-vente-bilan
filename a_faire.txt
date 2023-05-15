@@ -1,0 +1,82 @@
+CAHIER DES CHARGES 
+
+Nous vendons des bilans environnementaux aux entreprises, avec un cycle de vente long, nécessitant de nombreux
+appels
+
+Nous avons donc besoin de mettre un outil en place pour le suivi de nos prospects (lorsqu'ils deviennent clients, le suivi
+est effectué par un autre service, qui dispose d'un logiciel de gestion efficace), une CRM
+
+Notre site Internet offre beaucoup de conseils, et permet de récolter des "leads" (des entreprises intéressées par le
+sujet).
+
+A partir de là, nous suivons les entreprises, en fonction de leurs projets.
+
+Il s'agit d'un première version, avec peu de fonctionnalités : nous améliorerons notre processus, et donc l'application,
+progressivement.
+
+
+Le processus complet est le suivant :
+
+- Création d'un prospect : une assistante est chargée de créer les prospects arrivant par les différents canaux (site
+Internet principalement). Nous n'avons pour l'instant pas la possibilité de les créer automatiquement, et nous
+souhaitons pouvoir faire un premier tri. 
+Les informations saisies sont :
+▪ la raison sociale
+▪ le code Siret
+▪ un email de contact
+▪ le nom du contact
+▪ la date limite de la prochaine action (saisie)
+▪ le statut (à la création), automatiquement "à qualifier"
+
+- Suivi du prospect : notre chargé de prospection dispose d'une interface pour effectuer le suivi. Il a alors la liste
+des prospects à suivre, triés par date de prochaine action (les statuts pris en compte sont : "à qualifier", "à
+suivre")
+
+Un tableau avec les raisons sociale, le statut, et la date limite. En cliquant sur une ligne, on affiche le détail du
+prospect, incluant l'historique des actions effectuées.
+
+Un bouton permet d'enregistrer un appel.
+
+- Appel : Un nouvel écran est affiché, avec :
+▪ le détail du client
+▪ l'historique des appels effectués
+▪ la date / heure de début d'appel (non modifiable)
+▪ un zone pour saisir le déroulement de l'appel
+▪ le statut de l'appel : "absent", "argumenté"
+▪ un bouton pour terminer l'appel
+
+A la fin de l'appel, la date / heure de fin est automatiquement enregistrée
+
+Un nouveau formulaire apparait alors pour saisir le nouveau statut ("à suivre" ou "abandonné") et si le statut est
+"à suivre" : la date limite de la prochaine action (cette zone de saisie est effacée si le statut choisi est
+"abandonné").
+
+Les statuts possibles pour un prospect sont :
+* à qualifier
+* à suivre
+* abandonné
+* gagné (devenu client)
+
+Il faut être connecté pour utiliser l'application.
+
+L'administrateur de l'application peut créer des utilisateurs (nom, email de connexion, mot de passe, actif ou non). 
+
+Un utilisateur à également un ou plusieurs "rôles", parmi :
+◦ création des prospects
+◦ prospection
+◦ administration de l'application
+
+Il dispose également d'un fonction pour afficher des statistiques :
+
+* liste des prospect (filtrés pour un statut donné) avec le nombre d'appels passés
+
+Profitez de cet exercice pour enrichir les fonctionnalités de la classe générale utilisée pour faire les classes décrivant les
+objets du modèle de données, avec 2 objectifs :
+* réduire au maximum les méthodes spécifiques à développer pour chaque objet
+* réduire au maximum le travail dans les controleurs et templates
+
+
+Je vous propose également d'essayer de faire une URL unique (index.php), qui déclenche le bon contrôleur en fonction
+de 2 paramètres :
+* objet : sur quel type d'objet porte la demande
+* action : quelle action veut-on faire
